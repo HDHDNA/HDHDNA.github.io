@@ -3,48 +3,168 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Download Rebox</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Download - Rebox</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(to bottom, #0e0e14, #1b1b27);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(10, 10, 15, 0.6);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #222;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #00bfff;
+      text-shadow: 0 0 10px #00bfff99;
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00bfff;
+    }
+
+    .download-section {
+      text-align: center;
+      padding: 120px 20px 80px;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .download-section h1 {
+      font-size: 42px;
+      color: #00bfff;
+      margin-bottom: 10px;
+      text-shadow: 0 0 20px #00bfff;
+    }
+
+    .download-section p {
+      color: #aaa;
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .glow-button {
+      background: #00bfff;
+      border: none;
+      padding: 16px 34px;
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      color: black;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.3s ease;
+      box-shadow: 0 0 20px #00bfff99, 0 0 10px #00bfff55 inset;
+    }
+
+    .glow-button:hover {
+      background: #009acd;
+      color: white;
+      box-shadow: 0 0 25px #00bfffcc, 0 0 15px #00bfff88 inset;
+      transform: scale(1.05);
+    }
+
+    .preview-image {
+      max-width: 700px;
+      width: 90%;
+      margin: 50px auto 0;
+      display: block;
+      border-radius: 18px;
+      box-shadow: 0 0 30px #00bfff55;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease;
+    }
+
+    .preview-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .note {
+      margin-top: 60px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-
   <header>
-    <div class="container">
-      <img src="images/logo.png" alt="Rebox Logo" class="logo-img">
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="download.html">Download</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#discord">Discord</a></li>
-        </ul>
-      </nav>
-    </div>
+    <div class="logo">Rebox</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="download.html" class="download-btn">Download</a>
+    </nav>
   </header>
 
   <section class="download-section">
-    <div class="container">
-      <h1 class="download-title">Download Rebox Executor</h1>
-      <p class="download-subtitle">Choose a download method below. 100% free and secure.</p>
+    <h1>Download Rebox</h1>
+    <p>Click a button below to get the latest version of Rebox Executor.</p>
 
-      <div class="download-buttons">
-        <a href="https://lootdest.org/s?3y0tcQMf" target="_blank" class="button glow-blue">
-          <span> Download via LootLabs</span>
-        </a>
-        <a href="https://link-center.net/1344930/rebox" target="_blank" class="button glow-green">
-          <span> Download via Linkvertise</span>
-        </a>
-      </div>
-
-      <p class="disclaimer">If one method doesn’t work, try the other. We recommend using Chrome or Edge for the best experience.</p>
+    <div class="buttons">
+      <a class="glow-button" href="https://link-center.net/1344930/rebox">Download with Linkvertise</a>
+      <a class="glow-button" href="https://lootdest.org/s?3y0tcQMf">Download with LootLabs</a>
     </div>
+
+    <img src="logo.png" alt="Rebox UI Preview" class="preview-image" id="preview">
+
+    <p class="note">Educational purposes only. Use responsibly and always follow Roblox's terms of service.</p>
   </section>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Rebox Executor. All rights reserved.</p>
-    </div>
+    &copy; 2025 Rebox. All rights reserved.
   </footer>
 
+  <script>
+    // Fade-in effect on scroll
+    window.addEventListener('scroll', () => {
+      const img = document.getElementById('preview');
+      const rect = img.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        img.classList.add('preview-visible');
+      }
+    });
+  </script>
 </body>
 </html>

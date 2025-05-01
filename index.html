@@ -3,78 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rebox Executor</title>
+  <title>Rebox - Roblox Executor</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
-  <header>
-    <div class="container">
-      <img src="images/logo.png" alt="Rebox Logo" class="logo-img">
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="download.html">Download</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#discord">Discord</a></li>
-        </ul>
-      </nav>
-    </div>
+  <!-- HEADER -->
+  <header class="header">
+    <!-- Per il logo -->
+<img src="images/logo.png" alt="Rebox Logo" class="logo">
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#preview">Preview</a>
+      <a href="#download">Download</a>
+      <a href="https://discord.gg/YOURSERVER" target="_blank">Discord</a>
+    </nav>
   </header>
 
+  <!-- HERO -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>Rebox Executor</h1>
-      <p>The next-generation Roblox script executor. Safe. Fast. Free.</p>
-      <a href="download.html" class="button">Download Now</a>
+    <h1 data-aos="fade-up">Rebox Executor</h1>
+    <p data-aos="fade-up" data-aos-delay="200">A fast, secure and educational-purpose-only Roblox script executor.</p>
+    <div data-aos="fade-up" data-aos-delay="400">
+      <a href="#download" class="btn big">Download Now</a>
+      <a href="https://discord.gg/3Jmhfe6d" class="btn big discord" target="_blank">Join Discord</a>
     </div>
   </section>
 
-  <section id="features" class="features">
-    <div class="container">
-      <h2>Main Features</h2>
-      <div class="features-grid">
-        <div class="feature-box">
-          <h3>⚡ Ultra Fast Injection</h3>
-          <p>Experience blazing-fast injection speeds with no delay or lag.</p>
-        </div>
-        <div class="feature-box">
-          <h3>✅ 89 UNC</h3>
-          <p>Despite being free and keyless Rebox has an amazing unc.</p>
-        </div>
-        <div class="feature-box">
-          <h3>💻 Clean & Modern UI</h3>
-          <p>Minimal, modern interface designed for clarity and usability.</p>
-        </div>
-        <div class="feature-box">
-          <h3>🔒 Secure Execution</h3>
-          <p>Safe script execution with sandbox protection and custom API.</p>
-        </div>
-        <div class="feature-box">
-          <h3>🧠 Smart Script Detection</h3>
-          <p>Automatically detects and optimizes scripts for max compatibility.</p>
-        </div>
-        <div class="feature-box">
-          <h3>💥 100% Free & No Key System</h3>
-          <p>No keys, no need to pay. Just install and use it.</p>
-        </div>
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <h2 data-aos="fade-up">Powerful Features</h2>
+    <div class="cards">
+      <div class="card" data-aos="fade-up">
+        <h3>Fast Execution</h3>
+        <p>Rebox runs scripts instantly with high performance and minimal delay.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <h3>Clean UI</h3>
+        <p>Modern, minimal interface inspired by top-tier executors like Wave & Swift.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <h3>Free & Keyless</h3>
+        <p>Rebox is completely free to use and doesn't require any keys to unlock its full potential .</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="300">
+        <h3>Safe & Secure</h3>
+        <p>No malicious code, clean experience. For educational use only.</p>
       </div>
     </div>
   </section>
 
-  <section id="discord" class="discord">
-    <div class="container">
-      <h2>Join the Community</h2>
-      <p>Join on our Discord server and get updates, support, and exclusive scripts.</p>
-      <a href="https://discord.gg/3Jmhfe6d" target="_blank" class="button discord-btn">Join Discord</a>
+  <!-- PREVIEW -->
+  <section class="preview" id="preview">
+    <h2 data-aos="fade-up">Live UI Preview</h2>
+    <img src="images/preview.png" alt="Rebox UI Preview" data-aos="fade-up" data-aos-delay="200">
+  </section>
+  <!-- DOWNLOAD -->
+  <section class="features" id="download">
+    <h2 data-aos="fade-up">Download Rebox</h2>
+    <p data-aos="fade-up" data-aos-delay="100">Click below to download the latest version of Rebox Executor</p>
+    <div style="margin-top: 2rem;" data-aos="fade-up" data-aos-delay="200">
+      <a href="download.html" class="btn big">Download Rebox</a>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Rebox Executor. Built with ❤️ for the Roblox community.</p>
-    </div>
+    <p>© 2025 Rebox. This executor is provided for educational purposes only.</p>
   </footer>
 
+  <!-- AOS SCRIPT -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
